@@ -10,6 +10,7 @@ def AND(x1, x2):
     else:
         return 1
 
+print("===AND===")
 print(AND(0, 0))
 print(AND(1, 0))
 print(AND(0, 1))
@@ -25,6 +26,7 @@ def NAND(x1, x2):
     else:
         return 1
 
+print("===NAND===")
 print(NAND(0, 0))
 print(NAND(1, 0))
 print(NAND(0, 1))
@@ -40,7 +42,20 @@ def OR(x1, x2):
     else:
         return 1
 
+print("===OR===")
 print(OR(0, 0))
 print(OR(1, 0))
 print(OR(0, 1))
 print(OR(1, 1))
+
+def NOR(x1, x2):
+    s1 = NAND(x1, x2)
+    s2 = OR(x1, x2)
+    y = AND(s1, s2)
+    return y
+
+print("===NOR===")
+print(NOR(0, 0))
+print(NOR(1, 0))
+print(NOR(0, 1))
+print(NOR(1, 1))
